@@ -80,7 +80,7 @@ def plot_activity():
         s.index = pd.DatetimeIndex(s.index)
         s = s.reindex(idx, fill_value=0)
         s=s.resample("w").mean()
-        s.to_csv("fuckthis.csv")
+        s.to_csv("this.csv")
         print(s)
         x_dates = [datetime.datetime.strptime(d, "%Y-%m-%d").date() for d in active_days]
         y_values = msg_per_day
